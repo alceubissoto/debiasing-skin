@@ -6,7 +6,9 @@ Code to reproduce the results for the paper "Debiasing Skin Lesion Datasets and 
 
 To generate the background normalized images, use the code on the folder 'norm-background'.
 Example of usage:
+```
 python bg_norm_pix_crossdataset.py --train_image_path isic-rgb-299/ --train_mask_path isic-seg-299/ --train_csv_path isic-csv/isic2018-part2-all.csv --test_image_path atlas-rgb-299/ --test_mask_path atlas-seg-dermato-299/ test_csv_path atlas-csv/atlas-dermato-all.csv --output_path isic2018-norm-pix-alldata/
+```
 
 Notice that the images and masks must have the same size, and contain the same names.
 The normalized background image is learned on the training set, and applied to both training and test sets.
